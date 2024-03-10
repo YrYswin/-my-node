@@ -24,12 +24,4 @@ router.delete('/api/post/:id', deletePost);
 // Update Post By Id
 router.put('/api/post/:id', editPost);
 
-
-router.use((req, res) => {
-   const title = 'Not Found';
-   res
-      .status(404)
-      .render(createPath('error'), { title });
-});
-
 module.exports = router;
